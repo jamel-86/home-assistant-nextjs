@@ -6,17 +6,10 @@
   "arch": ["armv7", "armhf", "aarch64", "amd64", "i386"],
   "startup": "services",
   "boot": "auto",
-  "webui": "http://[HOST]:3000",
-  "host_network": true,
-  "ports": {
-    "3000/tcp": 3000
+  "options": {
+    "port": 3000
   },
-  "map": [
-    "config:rw"
-  ],
-  "options": {},
   "schema": {
-    "port": "int",
-    "host": "string"
+    "port": "int"
   }
 }
