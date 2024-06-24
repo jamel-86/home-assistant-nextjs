@@ -1,15 +1,18 @@
 {
-  "name": "Next.js Add-on",
-  "version": "1.0",
+  "name": "Next.js Addon",
+  "version": "0.1.0",
   "slug": "nextjs_addon",
-  "description": "A Next.js add-on for Home Assistant",
-  "arch": ["armv7", "armhf", "aarch64", "amd64", "i386"],
-  "startup": "services",
+  "description": "A Next.js app as Home Assistant Addon",
+  "startup": "application",
   "boot": "auto",
-  "options": {
-    "port": 3000
+  "webui": "http://[HOST]:3000",
+  "host_network": true,
+  "ports": {
+    "3000/tcp": 3000
   },
-  "schema": {
-    "port": "int"
-  }
+  "map": [
+    "config:rw"
+  ],
+  "options": {},
+  "schema": {}
 }
