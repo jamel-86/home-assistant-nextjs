@@ -6,6 +6,7 @@
   "arch": ["armv7", "armhf", "aarch64", "amd64", "i386"],
   "startup": "services",
   "boot": "auto",
+  "host_network": true,
   "options": {
     "port": 3000
   },
